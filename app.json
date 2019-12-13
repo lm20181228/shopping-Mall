@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/home/home",
+    "pages/skill/skill",
+    "pages/user/user",
+    "pages/addAddress/addAddress"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "list":[{
+      "pagePath":"pages/home/home",
+      "text":"首页",
+      "iconPath":"pages/images/index_icon.png",
+      "selectedIconPath":"pages/images/index_icon_HL.png"
+    },{
+      "pagePath":"pages/skill/skill",
+      "text":"技师",
+      "iconPath":"pages/images/skill_icon.png",
+      "selectedIconPath":"pages/images/skill_icon_HL.png"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "pages/images/user_icon.png",
+      "selectedIconPath": "pages/images/user_icon_HL.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,47 @@
+<!--pages/addAddress/addAddress.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="page-body">
+    <view class="page-section">
+      <view class="weui-cells__title">姓名：</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input name="name" class="weui-input" auto-focus placeholder="请输入预约姓名"/>
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">电话</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input name="tell" maxlength="11" type="number" class="weui-input" auto-focus placeholder="请输入预约电话"/>
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">验证码</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input name="code" class="weui-input" auto-focus placeholder="请输入验证码（0432）"/>
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">省市：</view>
+        <picker name="region" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          当前选择：{{region[0]}}-{{region[1]}}-{{region[2]}}
+        </view>
+      </picker>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">地址：</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input name="address" class="weui-input" auto-focus placeholder="请输入预约地址"/>
+        </view>
+      </view>
+    </view>
+    <button formType="submit" type="primary">提交</button>
+    <button formType="reset" type="error">重置</button>
+  </view>
+</form>

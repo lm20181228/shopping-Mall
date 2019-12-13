@@ -1,0 +1,25 @@
+<!--pages/user/user.wxml-->
+<view class="userInfo">
+<!-- 用户信息 -->
+  <view class="">
+    <image class="userHeader" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <view class="basicInfo">
+   <text>昵称：{{userInfo.nickName}}</text>  
+   <text>性别：{{userInfo.gender}}</text>  
+   <text>电话：XXXXXXXXXXXX</text>  
+  </view>
+</view>
+<view class="addressManagement">
+  <text class="text-center">【地址管理】</text>
+  <view class="addressList">
+    <view class="addressBlock" wx:for="{{address}}" wx:key="unique">
+      <text>{{item.name}} {{item.tell}}
+        {{item.address}}
+      </text>
+    </view>
+  </view>
+  <view class="newAddress" bindtap="newAddress">
+    +新增地址
+  </view>
+</view>

@@ -1,0 +1,22 @@
+/* pages/addAddress/addAddress.wxss */
+page{
+  box-sizing: border-box;
+
+  height: 100%;
+  width: 100%;
+  padding: 20rpx 30rpx
+}
+.page-section{
+  margin: 10px 0;
+}
+.weui-cells__title{
+  display: inline-block;
+  width: 100rpx;
+}
+.weui-cells,picker{
+  border: 1px solid #e4e4e4;
+  width: calc(100% - 160rpx);
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+}
