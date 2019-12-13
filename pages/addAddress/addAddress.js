@@ -9,20 +9,21 @@ Page({
   },
   // 
   bindRegionChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+    // console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       region: e.detail.value
     })
   },
   // 
   formSubmit: function (e) {
-    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    // console.log('form发生了submit事件，携带数据为：', e.detail.value)
     var str = e.detail.value;
+    
     if (str){
       wx.reLaunch({
-        url: '/pages/user/user?addInfo=' + JSON.stringify(str),
-        success: function (str){
-          
+        url: '/pages/user/user',
+        success: function (){
+          wx.setStorageSync("addInfo", str)
         }
       })
     }

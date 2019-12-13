@@ -30,10 +30,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var _self=this
+    var _self=this;
+    // 获取用户信息
     wx.getUserInfo({
       success: function (res) {
-        // console.log(res);
         var userInfo = res.userInfo
         var nickName = userInfo.nickName
         var avatarUrl = userInfo.avatarUrl
@@ -42,7 +42,7 @@ Page({
         var city = userInfo.city
         var country = userInfo.country
         var gender = ["未知","男","女"];
-    
+        // 修改用户信息数据
         _self.setData({
           userInfo: {
             nickName: userInfo.nickName,
@@ -52,18 +52,38 @@ Page({
         })
       }
     })
-    if (options){
-      var info = JSON.parse(options.addInfo);
+    this.cache_address(_self)
+    
+  },
+  cache_address: function (_self){
+    // 判断是否有缓存
+    if (!wx.getStorageSync("address")) {
+      wx.setStorageSync("address", _self.data.address)
+    } else {
+      console.log("兄弟，有缓存");
+      _self.setData({
+        "address": wx.getStorageSync("address")
+      })
+    }
+    // 判断新增地址
+    if (wx.getStorageSync("addInfo")) {
+      // 获取新增地址的数据缓存
+      var info = wx.getStorageSync("addInfo");
+      // 提取有用的数据重组格式
       var obj = {
         name: info.name,
         tell: info.tell,
-        address: info.region+info.address
+        address: info.region + info.address
       };
-      console.log(obj);
+      // 对原数据进行修改
       _self.data.address.push(obj);
+      // 同步修改缓存数据和源数据
+      wx.setStorageSync("address", _self.data.address);
       _self.setData({
-        "address": _self.data.address
+        "address": wx.getStorageSync("address")
       })
+      // 清空新增地址的数据缓存
+      wx.setStorageSync("addInfo", "")
     }
   },
   /**
