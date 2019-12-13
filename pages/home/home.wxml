@@ -1,2 +1,42 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 轮播图 -->
+<view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:key="*this">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" mode="scaleToFill"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+</view>
+<!-- 选项卡 -->
+<view class="topTabSwiper">
+  <view  wx:for="{{navTop}}" class="tab {{currentData == item.id ? 'tabborer ' : ''}}" data-current="{{item.id}}" bindtap="checkCurrent"> 
+    <image src="{{item.imageUrl}}"></image> 
+    <text>{{item.title}}</text>
+  </view>
+ 
+</view>
+<swiper class="swiper " current="{{currentData}}" style="height:600rpx" duration="300" bindchange="bindchange">
+  <swiper-item class="dataList"> 
+    <view class="swiper_con" wx:for="{{recommend}}" wx:key="item.id"> 
+      <view>
+        <image class="dataImg" src="{{item.imageUrl}}"></image>
+        <view class="dataInfo">
+          <text class="title">{{item.title}}</text>
+          <text class="price">价格：￥{{item.price}}</text>
+          <text class="desc">{{item.desc}}</text>
+        </view>
+        <text class="appoint">预约</text>
+      </view>
+      
+    </view>  
+  </swiper-item> 
+  <swiper-item> <view class="swiper_con"> 美甲</view>  </swiper-item> 
+  <swiper-item> <view class="swiper_con"> 美容</view>  </swiper-item> 
+  <swiper-item> <view class="swiper_con"> 美发</view>  </swiper-item> 
+  <swiper-item> <view class="swiper_con"> 美睫</view>  </swiper-item> 
+</swiper>

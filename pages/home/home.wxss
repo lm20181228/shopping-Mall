@@ -1,1 +1,74 @@
 /* pages/home/home.wxss */
+page{
+  box-sizing: border-box
+}
+.topTabSwiper{
+  display: flex;
+}
+.tab{
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+}
+.tabborer{
+  border-bottom:1px solid red;
+  color: #0f0;
+}
+.tab>image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.tab>text{
+  display: block;
+  font-size: 30rpx;
+}
+.swiper{
+ 
+}
+.dataList{
+  overflow: auto;
+}
+.swiper_con{
+  padding:20rpx;
+  border-bottom: 1px solid #e4e4e4;
+}
+.dataImg{
+  width: 200rpx;
+  height: 150rpx;
+}
+.dataInfo{
+  /* border: 1px solid red; */
+  width: calc(100% - 330rpx);
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 10rpx;
+}
+.dataInfo>text{
+  display: block
+}
+.dataInfo>.title{
+  font-size: 34rpx;
+  line-height: 2;
+}
+.dataInfo>.price{
+  font-size: 38rpx;
+  color: #d24a58;
+}
+.dataInfo>.desc{
+  font-size: 30rpx;
+  color: #666;
+}
+.appoint{
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+
+  line-height: 100rpx;
+  text-align: center;
+
+  border: 1px solid #d24a58;
+  border-radius: 50%;
+  vertical-align: top;
+  background: #d24a58;
+  color: #fff;
+}
