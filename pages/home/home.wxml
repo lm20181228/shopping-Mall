@@ -14,7 +14,7 @@
 </view>
 <!-- 选项卡 -->
 <view class="topTabSwiper">
-  <view  wx:for="{{navTop}}" class="tab {{currentData == item.id ? 'tabborer ' : ''}}" data-current="{{item.id}}" bindtap="checkCurrent"> 
+  <view  wx:for="{{navTop}}" wx:key="item.id" class="tab {{currentData == item.id ? 'tabborer ' : ''}}" data-current="{{item.id}}" bindtap="checkCurrent"> 
     <image src="{{item.imageUrl}}"></image> 
     <text>{{item.title}}</text>
   </view>
@@ -31,7 +31,7 @@
           <text class="price">价格：￥{{item.price}}</text>
           <text class="desc">{{item.desc}}</text>
         </view>
-        <text class="appoint">预约</text>
+        <text class="appoint" data-toIndex='{{item.id}}' bindtap="toAppointment">预约</text>
       </view>
       
     </view>  

@@ -5,7 +5,9 @@
     "pages/home/home",
     "pages/skill/skill",
     "pages/user/user",
-    "pages/addAddress/addAddress"
+    "pages/addAddress/addAddress",
+    "pages/appointment/appointment"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

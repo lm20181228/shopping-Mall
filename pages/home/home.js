@@ -112,6 +112,14 @@ Page({
       desc: "长而翘的睫毛，炯炯大眼",
     }]
   },
+  //切换到预约界面 
+  toAppointment:function(e){
+    console.log();
+    const index = e.currentTarget.dataset.toindex;
+    wx.navigateTo({
+      url: '/pages/appointment/appointment?index='+index,
+    })
+  },
   // bindchange:function(e){
   //   const that = this;
   //   that.setData({

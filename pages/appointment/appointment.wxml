@@ -1,0 +1,37 @@
+<!--pages/appointment/appointment.wxml-->
+<image class="img-banner" src="/pages/images/banner_01.png"></image>
+<!-- 地址 -->
+<view class="address">
+  <view class="address_index">
+    <text>{{address.name}} {{address.tell}}
+    {{address.address}}
+    </text>
+  </view>
+</view>
+<!-- 预约服务 -->
+<view class="reservationInfo">
+  <text class="path">服务时间 </text>
+  <form bindsubmit="formsubmit">
+    <view class="section electTime">
+    <!-- <view class="section__title">日期选择器</view> -->
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          日期: <input class="inputStyle timeInput" name="date" value="{{date}}"></input>
+        </view>
+      </picker>
+    </view>
+     <view class="section electTime">
+      <!-- <view class="section__title">时间选择器</view> -->
+      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          时间: <input class="inputStyle timeInput" name="time" value="{{time}}"></input>
+        </view>
+      </picker>
+    </view>
+    <view class="message">
+      <text class="path">留言信息</text>
+      <input type="text" name="mess" class="inputStyle mess"></input>
+    </view>
+    <button  form-type="submit">确定预约</button>
+  </form>
+</view>
