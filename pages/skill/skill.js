@@ -13,6 +13,7 @@ Page({
     serviceList: [{//推荐
       id: 0,
       name: "张吉师",
+      type:"hairdressing",
       imageUrl: "/pages/images/skilledt_img_01.png",
       title: "美容美发沙龙",
       price: "500",
@@ -24,6 +25,7 @@ Page({
     }, {
       id: 1,
       name: "包技师",
+      type:"manicure",
       imageUrl: "/pages/images/skilledt_img_02.png",
       title: "元月美甲沙龙",
       price: "888",
@@ -35,6 +37,7 @@ Page({
     }, {
       id: 2,
       name: "柳依依",
+        type:"eyelashes",
       imageUrl: "/pages/images/skilledt_img_03.png",
       title: "璀璨美睫会所",
       price: "588",
@@ -46,6 +49,7 @@ Page({
     }, {
       id: 3,
       name: "网技师",
+        type:"cosmetology",
       imageUrl: "/pages/images/skilledt_img_04.png",
       title: "柔丝妮美容养生馆",
       price: "198",
@@ -57,6 +61,7 @@ Page({
     }, {
       id: 4,
       name: "李工技师",
+        type:"hairdressing",
       imageUrl: "/pages/images/skilledt_img_01.png",
       title: "潮流发型有限公司",
       price: "236",
@@ -68,6 +73,7 @@ Page({
     }, {
       id: 5,
       name: "刘技师",
+      type:"cosmetology",
       imageUrl: "/pages/images/skilledt_img_02.png",
       title: "化妆大咖",
       price: "198",

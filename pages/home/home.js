@@ -39,36 +39,42 @@ Page({
     contentInfo: "",//当前所选选项卡的数据
       recommend:[{//推荐
         id:0,
+        type:"manicure",
         imageUrl:"/pages/images/recommend_img_01.png",
         title:"秋季自然特价美甲",
         price:"198",
         desc:"教你怎么做活得精致的小仙女",
       }, {
           id: 1,
+          type:"eyelashes",
           imageUrl: "/pages/images/recommend_img_02.png",
           title: "睫毛稀疏 种睫毛来帮忙",
           price: "1888",
           desc: "长而翘的睫毛，炯炯大眼",
         },{
           id: 2,
+          type: "cosmetology",
           imageUrl: "/pages/images/recommend_img_03.png",
           title: "爱丽颗",
           price: "1588",
           desc: "我们追求的只有更好！",
         },{
           id: 3,
+          type:"hairdressing",
           imageUrl: "/pages/images/recommend_img_04.png",
           title: "一本造型",
           price: "198",
           desc: "由著名的形象设计师杨XX",
         }, {
           id: 4,
+          type:"hairdressing",
           imageUrl: "/pages/images/recommend_img_05.png",
           title: "潮流发型",
           price: "236",
           desc: "当下最时尚最潮流的发型",
         }, {
           id: 5,
+          type:"cosmetology",
           imageUrl: "/pages/images/recommend_img_06.png",
           title: "画对了妆，你就是小仙女",
           price: "198",

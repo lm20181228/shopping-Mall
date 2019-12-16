@@ -23,6 +23,9 @@ Page({
       wx.reLaunch({
         url: '/pages/user/user',
         success: function (){
+          wx.showToast({
+            title: '创建成功！',
+          })
           wx.setStorageSync("addInfo", str)
         }
       })
