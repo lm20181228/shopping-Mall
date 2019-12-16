@@ -32,7 +32,12 @@ Page({
     })
   },
   formsubmit:function(e){
-    console.log(e.detail.value)
+    console.log(e.detail.value);
+    wx.showToast({
+      title:"提交成功",
+      icon:"success",
+      //duration:2000
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
