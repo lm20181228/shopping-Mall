@@ -25,6 +25,7 @@ page{
 .swiper{
  
 }
+/* 列表样式 */
 .dataList{
   overflow: auto;
 }

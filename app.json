@@ -4,6 +4,7 @@
     "pages/logs/logs",
     "pages/home/home",
     "pages/skill/skill",
+    "pages/skill/skillDetail/skillDetail",
     "pages/user/user",
     "pages/addAddress/addAddress",
     "pages/appointment/appointment"

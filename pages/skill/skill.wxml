@@ -1,2 +1,23 @@
 <!--pages/skill/skill.wxml-->
-<text>pages/skill/skill.wxml</text>
+<!-- 搜索框 -->
+<input confirm-type="search" value="" class="searchInput"></input>
+<!-- 地址 -->
+<view class="address">
+  <view class="address_index">
+    <text>{{address.name}} {{address.tell}}
+    {{address.address}}
+    </text>
+  </view>
+</view>
+<!-- 附近服务 -->
+<view class="serviceList">
+  <view wx:for="{{serviceList}}" class="swiper_con" data-skillId="{{item.id}}" bindtap="toSkill">
+      <image class="dataImg" src="{{item.imageUrl}}"></image>
+      <view class="dataInfo">
+        <text class="title">{{item.title}}</text>
+        <text class="price">{{item.name}}{{"￥"+item.price}}</text>
+        <text class="desc">{{item.desc}}</text>
+      </view>
+      <text class="distance" data-toIndex='{{item.id}}'>100m</text>
+    </view>
+</view>

@@ -74,6 +74,20 @@
 					"id": -1,
 					"name": "pages/appointment/appointment",
 					"pathName": "pages/appointment/appointment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/skill/skill",
+					"pathName": "pages/skill/skill",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/skill/skillDetail/skillDetail",
+					"pathName": "pages/skill/skillDetail/skillDetail",
 					"scene": null
 				}
 			]

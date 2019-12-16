@@ -1,1 +1,75 @@
 /* pages/skill/skill.wxss */
+.searchInput{
+  border: 1px solid #e4e4e4 ;
+  width: 90%;
+  margin: 30rpx auto;
+  padding: 14rpx;
+  border-radius: 20rpx;
+}
+
+.address{
+  height: 130rpx;
+  background:#e4e4e4;
+  padding: 20rpx; 
+}
+.address_index{
+  border-radius: 20rpx;
+  height: 100%;
+  background: #fff;
+  font-size: 32rpx;
+  line-height: 2;
+  padding: 0 20rpx;
+}
+.reservationInfo{
+  padding: 20rpx  50rpx;
+}
+/* 列表样式 */
+.serviceList{
+  overflow: auto;
+}
+.swiper_con{
+  padding:20rpx;
+  border-bottom: 1px solid #e4e4e4;
+}
+.dataImg{
+  width: 200rpx;
+  height: 150rpx;
+}
+.dataInfo{
+  /* border: 1px solid red; */
+  width: calc(100% - 330rpx);
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 10rpx;
+}
+.dataInfo>text{
+  display: block
+}
+.dataInfo>.title{
+  font-size: 34rpx;
+  line-height: 2;
+}
+.dataInfo>.price{
+  font-size: 38rpx;
+  color: #d24a58;
+}
+.dataInfo>.desc{
+  font-size: 30rpx;
+  color: #666;
+  vertical-align: middle;
+  
+}
+/* .appoint{
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+
+  line-height: 100rpx;
+  text-align: center;
+
+  border: 1px solid #d24a58;
+  border-radius: 50%;
+  vertical-align: top;
+  background: #d24a58;
+  color: #fff;
+} */

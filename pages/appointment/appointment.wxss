@@ -40,7 +40,7 @@
   vertical-align: middle;
   border-radius: 20rpx;
   font-size: 28rpx; 
-  padding: 0 10rpx;
+  padding: 8rpx 10rpx;
 }
 .mess{
   width: 100%;
